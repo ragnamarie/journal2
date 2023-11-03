@@ -5,38 +5,29 @@ import Tabs from "../Tabs";
 import Tab from "../Tab";
 import Badge from "../Badge";
 import { Fragment } from "react";
+import { useState } from "react";
 
-const entries = [
+const initialEntries = [
   {
     id: 1000,
     date: "Feb 5, 2025",
-    motto: "We are in a state of chaos",
+    motto: "Succession",
     notes:
-      "Today I learned about React State. It was fun! I can't wait to learn more.",
+      "Succession is an American satirical comedy-drama television series created by Jesse Armstrong that aired on HBO from June 3, 2018, to May 28, 2023. The series centers on the Roy family, the owners of global media and entertainment conglomerate Waystar RoyCo, and their fight for control of the company amidst uncertainty about the health of the family's patriarch.",
   },
   {
     id: 999,
     date: "Feb 4, 2025",
-    motto: "Props, Props, Props",
+    motto: "The White Lotus",
     notes:
-      "Today I learned about React Props. Mad props to everyone who understands this!",
-  },
-  {
-    id: 998,
-    date: "Feb 3, 2025",
-    motto: "How to nest components online fast",
-    notes:
-      "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
-  },
-  {
-    id: 997,
-    date: "Feb 2, 2025",
-    motto: "I'm a React Developer",
-    notes: "My React-ion when I learned about React: 😍",
+      "The White Lotus is an American dark comedy-drama anthology television series created by Mike White for HBO.[4][5] It follows the guests and employees of the fictional White Lotus resort chain, whose interactions are affected by their various psychosocial dysfunctions. The press release notes that 'each passing day, a darker complexity emerges in these picture-perfect travelers, the hotel's cheerful employees, and the idyllic locale itself'.The first two seasons are set in Maui and Sicily, respectively.",
   },
 ];
 
+//hier weitermachen mit Form!
 export default function EntriesSection() {
+  const [entries, setEntries] = useState(initialEntries);
+
   return (
     <section className="entries-section">
       <Tabs>

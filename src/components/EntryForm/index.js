@@ -7,11 +7,11 @@ export default function EntryForm() {
       <h2 className="entry-form__title">New Entry</h2>
       <div className="entry-form__fields">
         <div className="entry-form__field">
-          <label htmlFor="motto">Motto</label>
+          <label htmlFor="motto">Name</label>
           <input type="text" name="motto" id="motto" />
         </div>
         <div className="entry-form__field">
-          <label htmlFor="notes">Notes</label>
+          <label htmlFor="notes">Plot</label>
           <textarea name="notes" id="notes" rows="4" />
         </div>
         <div className="entry-form__button-wrapper">
