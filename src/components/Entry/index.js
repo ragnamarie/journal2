@@ -1,18 +1,19 @@
 import FavoriteButton from "../FavoriteButton";
 import "./Entry.css";
 
-export default function Entry({ motto, notes, date }) {
+export default function Entry({ date, name, plot }) {
+  console.log(date, name, plot);
   return (
     <article className="entry">
       <time className="entry__date">{date}</time>
       <div className="entry__content">
-        <div className="entry__motto-container">
-          <h2 className="entry__motto">
-            <q>{motto}</q>
+        <div className="entry__name-container">
+          <h2 className="entry__name">
+            <q>{name}</q>
           </h2>
           <FavoriteButton />
         </div>
-        <p className="entry__notes">{notes}</p>
+        <p className="entry__plot">{plot}</p>
       </div>
     </article>
   );

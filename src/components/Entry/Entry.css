@@ -18,19 +18,19 @@
   font-weight: 600;
 }
 
-.entry__motto-container {
+.entry__name-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.entry__motto {
+.entry__name {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
 }
 
-.entry__notes {
+.entry__plot {
   margin: 0;
   font-size: 14px;
 }
