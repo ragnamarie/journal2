@@ -1,8 +1,14 @@
 import FavoriteButton from "../FavoriteButton";
 import "./Entry.css";
 
-export default function Entry({ date, name, plot }) {
-  console.log(date, name, plot);
+export default function Entry({
+  date,
+  name,
+  plot,
+  id,
+  isFavorite,
+  onToggleFavorite,
+}) {
   return (
     <article className="entry">
       <time className="entry__date">{date}</time>
@@ -11,7 +17,11 @@ export default function Entry({ date, name, plot }) {
           <h2 className="entry__name">
             <q>{name}</q>
           </h2>
-          <FavoriteButton />
+          <FavoriteButton
+            id={id}
+            isFavorite={isFavorite}
+            onToggleFavorite={onToggleFavorite}
+          />
         </div>
         <p className="entry__plot">{plot}</p>
       </div>

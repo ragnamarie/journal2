@@ -1,7 +1,7 @@
 import "./EntryForm.css";
 import Button from "../Button";
 
-export default function EntryForm({ onAddEntry, id, date }) {
+export default function EntryForm({ onAddEntry, id, date, isFavorite }) {
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -16,13 +16,13 @@ export default function EntryForm({ onAddEntry, id, date }) {
       date: date,
       name,
       plot,
+      isFavorite: isFavorite,
     };
 
     // Call onAddActivity and pass the data object as an argument
     onAddEntry(data);
-
-    event.target.reset();
     console.log(data);
+    event.target.reset();
   }
 
   return (

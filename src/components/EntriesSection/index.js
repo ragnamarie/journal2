@@ -6,7 +6,7 @@ import Tab from "../Tab";
 import Badge from "../Badge";
 import { Fragment } from "react";
 
-export default function EntriesSection({ entries }) {
+export default function EntriesSection({ entries, onToggleFavorite }) {
   return (
     <section className="entries-section">
       <Tabs>
@@ -18,9 +18,16 @@ export default function EntriesSection({ entries }) {
         </Tab>
       </Tabs>
       <div className="entries-section__entries">
-        {entries.map(({ id, date, name, plot }) => (
+        {entries.map(({ id, date, name, plot, isFavorite }) => (
           <Fragment key={id}>
-            <Entry date={date} name={name} plot={plot} />
+            <Entry
+              date={date}
+              name={name}
+              plot={plot}
+              isFavorite={isFavorite}
+              id={id}
+              onToggleFavorite={onToggleFavorite}
+            />
             <Divider />
           </Fragment>
         ))}
